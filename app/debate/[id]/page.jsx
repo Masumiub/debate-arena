@@ -237,7 +237,7 @@ export default function DebatePage({ params }) {
     if (status === 'loading' || !debate) return <div className='text-center'><p className='text-center'><span className="loading loading-spinner text-primary"></span></p> </div>
 
     return (
-        <div className="p-6 space-y-6 w-full md:w-8/12 mx-auto mt-10">
+        <div className="p-6 space-y-6 w-full md:w-10/12 mx-auto mt-10">
 
             <div className='flex flex-col md:flex-row gap-10 items-center'>
                 <div className='w-full md:w-2/3'>

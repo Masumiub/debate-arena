@@ -9,7 +9,7 @@ export default function ClientLayout({ children }) {
     <SessionProvider>
       <Navbar />
       {children}
-      <div className='w-full md:w-8/12 mx-auto'>
+      <div className='w-full md:w-10/12 mx-auto'>
         <Footer></Footer>
       </div>
 

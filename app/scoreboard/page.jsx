@@ -18,7 +18,7 @@ export default function ScoreBoardPage() {
   }, [range])
 
   return (
-    <div className="p-8 w-full md:w-8/12 mx-auto">
+    <div className="p-8 w-full md:w-10/12 mx-auto">
 
 
       <h1 className="text-4xl font-bold text-center mb-6 mt-12">🏆 Leaderboard</h1>

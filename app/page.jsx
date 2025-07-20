@@ -15,7 +15,7 @@ export default function HomePage() {
   const { data: session } = useSession()
 
   return (
-    <main className='w-full md:w-8/12 mx-auto'>
+    <main className='w-full md:w-10/12 mx-auto'>
       <Fade>
         <HeroSection />
       </Fade>
