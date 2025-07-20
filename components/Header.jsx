@@ -39,10 +39,12 @@ const HeroSection = () => {
       </div>
 
       <div className='w-full lg:w-1/2 mx-auto'>
-        <Lottie className="w-[270px] md:w-[300px] lg:w-[400px] mx-auto" animationData={Img} loop={true} ></Lottie>
+        <Lottie className="w-full mx-auto" animationData={Img} loop={true} ></Lottie>
       </div>
 
     </header>
+
+    // [270px] md:w-[300px] lg:w-[400px]
   )
 }
 
