@@ -28,7 +28,7 @@ export default function AllDebates() {
   }
 
   return (
-    <div className="p-6">
+    <div className="p-6 mt-15">
       <h1 className="text-4xl font-bold mb-6 text-center">🔥 Current Debates</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center mt-10">
         {debates.slice(0, 6).map((debate) => (

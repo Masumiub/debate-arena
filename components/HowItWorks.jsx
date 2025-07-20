@@ -44,7 +44,7 @@ import { Fade } from "react-awesome-reveal";
 
     const HowItWorks = () => {
         return (
-            <section className="py-16 px-4 bg-base-100 text-base-content">
+            <section className="py-16 px-4 bg-base-100 text-base-content mt-20">
                 <div className="mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4"> How It Works</h2>
                     <p className=" mb-12">
