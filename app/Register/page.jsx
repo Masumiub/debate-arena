@@ -12,6 +12,8 @@ import Img from '../../public/assets/Animation - contact.json'
 import Lottie from 'lottie-react';
 import { useEffect } from "react";
 
+import Link from "next/link";
+
 const schema = z.object({
   name: z.string().min(1),
   email: z.string().email(),
@@ -24,7 +26,7 @@ export default function Register() {
   const { register, handleSubmit } = useForm({ resolver: zodResolver(schema) });
 
   const router = useRouter()
-  
+
   const { data: session, status } = useSession()
   useEffect(() => {
     if (status === 'authenticated') {
@@ -70,13 +72,19 @@ export default function Register() {
               <label className="label mt-3">Password</label>
               <input type="password" className="input w-full" placeholder="Password" {...register("password")} required />
 
-              <button className="btn btn-neutral mt-4 w-full rounded-full" type="submit">Register</button>
+              <button className="btn btn-primary mt-4 w-full rounded-full" type="submit">Register</button>
             </form>
 
             <div className="w-full">
               <button className="btn rounded-full w-full" onClick={() => signIn('google')}><FcGoogle />Login with Google</button>
             </div>
+
+            <div className="text-center mt-2">
+              <p>Already Have Account? <span className="text-primary"> <Link href='/Login'>Login</Link></span></p>
+            </div>
           </fieldset>
+
+
         </div>
 
         <div className='w-full md:w-1/2 mx-auto'>

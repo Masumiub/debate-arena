@@ -11,6 +11,10 @@ import { FaHeart } from 'react-icons/fa'
 import { MdDelete } from 'react-icons/md'
 import { IoMdArrowRoundForward } from 'react-icons/io'
 
+
+import Swal from 'sweetalert2'
+
+
 export default function DebatePage({ params }) {
     const { id } = use(params)
     const { data: session, status } = useSession()
@@ -96,14 +100,24 @@ export default function DebatePage({ params }) {
 
     const handlePostArgument = () => {
         if (hasPosted) {
-            alert("You have already posted an argument.");
+            //alert("You have already posted an argument.");
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "You have already posted an argument.",
+            });
             return;
         }
 
         if (!argumentText.trim()) return;
 
         if (containsBannedWords(argumentText)) {
-            alert("⚠️ Your argument contains inappropriate language. Please rephrase and try again.");
+            // alert("⚠️ Your argument contains inappropriate language. Please rephrase and try again.");
+            Swal.fire({
+                icon: "error",
+                title: "⚠️ Your argument contains inappropriate language.",
+                text: "Please rephrase and try again.",
+            });
             return;
         }
 
@@ -117,7 +131,7 @@ export default function DebatePage({ params }) {
             setArgumentText('');
             setHasPosted(true);
 
-            
+
             const res = await axios.get(`/api/debates/${id}/arguments`);
             setArgumentsList(res.data);
         });
@@ -130,17 +144,37 @@ export default function DebatePage({ params }) {
                 if (res.data.success) {
                     setArgumentsList(prev => prev.filter(arg => arg._id !== argId));
                 } else {
-                    alert('Failed to delete argument.');
+                    //alert('Failed to delete argument.');
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "Failed to delete argument.",
+                    });
                 }
             })
             .catch(err => {
                 console.error('Delete failed', err);
                 if (err.response?.status === 403) {
-                    alert('Delete not allowed. Either you are not the author or the time window has expired.');
+                    // alert('Delete not allowed. Either you are not the author or the time window has expired.');
+                    Swal.fire({
+                        icon: "error",
+                        title: "Delete not allowed",
+                        text: "Either you are not the author or the time window has expired.",
+                    });
                 } else if (err.response?.status === 401) {
-                    alert('You must be signed in to delete arguments.');
+                    //alert('You must be signed in to delete arguments.');
+                    Swal.fire({
+                        icon: "error",
+                        title: "Delete not allowed",
+                        text: "You must be signed in to delete arguments.",
+                    });
                 } else {
-                    alert('Something went wrong while deleting.');
+                    // alert('Something went wrong while deleting.');
+                    Swal.fire({
+                        icon: "error",
+                        title: "Ooops",
+                        text: "Something went wrong while deleting.",
+                    });
                 }
             });
     };
@@ -152,15 +186,35 @@ export default function DebatePage({ params }) {
                 setArgumentsList(prev =>
                     prev.map(arg => arg._id === argId ? { ...arg, votes: arg.votes + 1 } : arg)
                 );
+                Swal.fire({
+                    icon: "success",
+                    title: "Great!",
+                    text: "Vote was successful.",
+                });
             })
             .catch(err => {
                 if (err.response?.status === 403) {
-                    alert('You cannot vote on your own argument.');
+                    // alert('You cannot vote on your own argument.');
+                    Swal.fire({
+                        icon: "error",
+                        title: "Ooops",
+                        text: "You cannot vote on your own argument.",
+                    });
                 } else if (err.response?.status === 400) {
-                    alert('You have already voted.');
+                    //alert('You have already voted.');
+                    Swal.fire({
+                        icon: "error",
+                        title: "Ooops",
+                        text: "You have already voted.",
+                    });
                 } else {
-                    alert('Failed to vote.');
-                    console.error(err);
+                    //alert('Failed to vote.');
+                    //console.error(err);
+                    Swal.fire({
+                        icon: "error",
+                        title: "Ooops",
+                        text: "Failed to vote.",
+                    });
                 }
             });
 
@@ -244,7 +298,7 @@ export default function DebatePage({ params }) {
                             <div key={arg._id} className="p-4 rounded-md bg-base-100 shadow-lg border-2 border-base-200">
                                 <div className="flex justify-between">
                                     <p><strong>{arg.author.name}</strong> - {moment(arg.createdAt).fromNow()}</p>
-                                    <span className={`badge ${arg.side === 'support' ? 'badge-success' : 'badge-error'}`}>{arg.side}</span>
+                                    <span className={`badge ${arg.side === 'support' ? 'badge-success text-white' : 'badge-error text-white'}`}>{arg.side}</span>
                                 </div>
                                 <p className="my-2">{arg.content}</p>
                                 <div className="flex justify-between items-center">
@@ -277,7 +331,7 @@ export default function DebatePage({ params }) {
                     isDebateOver && (
                         <div>
                             <h1 className='mt-10 text-3xl font-bold'>Winner</h1>
-                            <h2>{winner}</h2>
+                            <h2 className='mt-2'>{winner}</h2>
                         </div>
                     )
                 }

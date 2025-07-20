@@ -8,6 +8,7 @@ import { useSession } from 'next-auth/react'
 import { useEffect } from "react";
 import Lottie from "lottie-react";
 import Img from '../../public/assets/Mental Therapy.json'
+import Link from "next/link";
 
 export default function Login() {
   const { register, handleSubmit } = useForm();
@@ -46,13 +47,22 @@ export default function Login() {
               <label className="label mt-3">Password</label>
               <input type="password" className="input w-full" placeholder="Password" {...register("password")} required />
 
-              <button className="btn btn-neutral mt-4 w-full rounded-full" type="submit">Login</button>
+              <button className="btn btn-primary mt-4 w-full rounded-full" type="submit">Login</button>
             </form>
 
             <div className="w-full">
               <button className="btn rounded-full w-full" onClick={() => signIn('google')}><FcGoogle />Login with Google</button>
             </div>
+
+            <div className="text-center mt-2">
+              <p>New to Debate Arena? <span className="text-primary"> <Link href='/Register'>Register</Link></span></p>
+            </div>
+
           </fieldset>
+
+
+
+
         </div>
 
         <div className='w-full md:w-1/2 mx-auto'>

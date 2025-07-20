@@ -21,7 +21,7 @@ export default function AllDebates() {
 
   const handleJoin = (id) => {
     if (!session) {
-      router.push('/') // or show login modal
+      router.push('/Login') 
     } else {
       router.push(`/debate/${id}`)
     }
