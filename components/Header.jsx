@@ -11,7 +11,7 @@ const HeroSection = () => {
   //console.log("Session Data:", session);
 
   return (
-    <header className="min-h-[40vh] flex flex-col items-center justify-around md:flex-row px-4 bg-linear-to-r from-cyan-500 to-blue-500 rounded-2xl text-white">
+    <header className="min-h-[40vh] flex flex-col items-center justify-around md:flex-row px-4 py-25 bg-linear-to-r from-cyan-500 to-blue-500 rounded-2xl text-white">
 
 
       <div className="w-full md:w-1/2 px-6">
