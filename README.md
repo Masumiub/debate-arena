@@ -27,7 +27,6 @@ A full-stack web application where users can join or create public debates, choo
 - **Authentication**: [NextAuth.js](https://next-auth.js.org/)
 - **Database**: [MongoDB (native driver)](https://www.mongodb.com/)
 - **Form Validation**: [Zod](https://zod.dev/) + [React Hook Form](https://react-hook-form.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/) *(optional)*
 - **Hosting**: [Vercel](https://vercel.com/)
 - **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
 
@@ -35,16 +34,15 @@ A full-stack web application where users can join or create public debates, choo
 
 ## 📦 Packages Used
 
-"next": "15.x",
-"react": "18.x",
-"next-auth": "^4.x",
-"react-hook-form": "^7.x",
-"zod": "^3.x",
-"axios": "^1.x",
-"mongodb": "^6.x",
-"tailwindcss": "^3.x",
-"framer-motion": "^11.x",
-"react-icons": "^4.x"
+- "next": "15.x",
+- "react": "18.x",
+- "next-auth": "^4.x",
+- "react-hook-form": "^7.x",
+- "zod": "^3.x",
+- "axios": "^1.x",
+- "mongodb": "^6.x",
+- "tailwindcss": "^3.x",
+- "react-icons": "^4.x"
 
 
 ## 🚀 How to Run Locally
