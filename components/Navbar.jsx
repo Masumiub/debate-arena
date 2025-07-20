@@ -59,7 +59,7 @@ export default function Navbar() {
           </ul>
         </div>
         <img src="/assets/icons8-debate-100.png" alt="logo" className='w-12 mr-2' />
-        <Link className="text-xl font-bold" href="/">Debate Arena</Link>
+        <Link className="text-xl font-bold hidden md:block" href="/">Debate Arena</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
