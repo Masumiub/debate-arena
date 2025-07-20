@@ -11,6 +11,7 @@ out
 .env.development.local
 .env.test.local
 .env.production.local
+client_secret_602868574697-aeckl0ei9ctldjlbfkpbffpu4fcpp8ro.apps.googleusercontent.com.json
 
 # log files
 npm-debug.log*
