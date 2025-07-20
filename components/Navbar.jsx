@@ -1,20 +1,38 @@
 'use client'
 import { useSession, signIn, signOut } from 'next-auth/react'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 import { FcGoogle } from "react-icons/fc";
 import { FiLogOut } from "react-icons/fi";
 import { MdCreateNewFolder } from "react-icons/md";
 import { GoHome } from "react-icons/go";
 import { GrScorecard } from "react-icons/gr";
 import { BiSolidMessageDetail } from "react-icons/bi";
-
+import { CgDarkMode } from "react-icons/cg";
 
 export default function Navbar() {
   const { data: session } = useSession()
+
+  const [theme, setTheme] = useState('light');
+
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
+
   //console.log(session.user.image)
   return (
 
-    <div className="navbar bg-base-100 shadow-sm w-full md:w-8/12 mx-auto">
+    <div className="navbar bg-base-100  w-full md:w-8/12 mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -75,15 +93,17 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="navbar-end gap-2">
+        <div className="form-control mt-1">
+          <label className="label cursor-pointer">
+            <CgDarkMode size={25} />
+            <input type="checkbox" className="toggle theme-controller" onChange={toggleTheme} checked={theme === 'dark'} />
+          </label>
+        </div>
         {session ? (
           <>
-
-
-            <p className='text-xs'>{session?.user?.name}</p>
+            {/* <p className='text-xs'>{session?.user?.name}</p> */}
             <img src={session?.user?.image} alt="photoURL" className='w-10 rounded-full' />
-
-
-            <button onClick={() => signOut()} className="btn"><FiLogOut /> Sign Out</button>
+            <button onClick={() => signOut()} className="btn rounded-full"><FiLogOut /> Logout</button>
           </>
         ) : (
           <>

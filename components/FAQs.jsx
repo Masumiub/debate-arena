@@ -2,7 +2,7 @@
 
 const FAQs = () => {
   return (
-    <div className="w-full mx-auto mt-15">
+    <div className="w-full mx-auto mt-15 mb-20">
       <h2 className="text-4xl font-bold mb-6 text-center">Frequently Asked Questions</h2>
 
       <div className="space-y-4">

@@ -2,6 +2,8 @@
 
 import { signIn, useSession } from 'next-auth/react'
 import Link from 'next/link'
+import Lottie from "lottie-react";
+import Img from '../public/assets/Business team.json'
 
 const HeroSection = () => {
   const { data: session } = useSession()
@@ -9,8 +11,10 @@ const HeroSection = () => {
   //console.log("Session Data:", session);
 
   return (
-    <header className="min-h-[40vh] flex flex-col items-center justify-center text-center px-4 bg-base-300 rounded-2xl">
-      <div className="max-w-3xl">
+    <header className="min-h-[40vh] flex flex-col items-center justify-around md:flex-row px-4 bg-base-200 rounded-2xl">
+
+
+      <div className="w-full md:w-1/2 px-6">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           {session && (
             <p className="text-2xl text-gray-500 mt-4">Welcome, {session.user.name}!</p>
@@ -33,6 +37,11 @@ const HeroSection = () => {
         <Link href='/all-debates' className='btn btn-outline py-3  rounded-full ml-2'>Browse Debate</Link>
 
       </div>
+
+      <div className='w-full md:w-1/2 mx-auto'>
+        <Lottie className="w-[270px] md:w-[400px] lg:w-[400px] mx-auto" animationData={Img} loop={true} ></Lottie>
+      </div>
+
     </header>
   )
 }
