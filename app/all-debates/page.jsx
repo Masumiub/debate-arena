@@ -63,7 +63,7 @@ export default function AllDebatesPage() {
   }
 
   return (
-    <div className="p-6 w-full md:w-8/12 mx-auto">
+    <div className="p-6 w-full md:w-10/12 mx-auto">
 
       <div className='mt-15 mb-10'>
 

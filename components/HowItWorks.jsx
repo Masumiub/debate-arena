@@ -51,8 +51,9 @@ import { Fade } from "react-awesome-reveal";
                         Engage in thought-provoking debates and let your voice be heard. Here's a quick guide to get started:
                     </p>
 
-                    <Fade cascade>
+                    
                     <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+                        
                         {steps.map((step, index) => (
                             
                             <div key={index}
@@ -65,8 +66,9 @@ import { Fade } from "react-awesome-reveal";
                             </div>
                            
                         ))}
+                        
                     </div>
-                    </Fade>
+                   
                 </div>
             </section>
         );
