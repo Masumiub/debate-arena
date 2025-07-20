@@ -1,5 +1,7 @@
 'use client'
 
+import { Fade } from "react-awesome-reveal";
+
 
     const steps = [
         {
@@ -49,18 +51,22 @@
                         Engage in thought-provoking debates and let your voice be heard. Here's a quick guide to get started:
                     </p>
 
+                    <Fade cascade>
                     <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
                         {steps.map((step, index) => (
-                            <div
-                                key={index}
+                            
+                            <div key={index}
+                                
                                 className="card bg-linear-to-t from-base-100 to-base-200 shadow-md px-10 py-16 rounded-lg text-left hover:shadow-lg transition-all duration-300"
                             >
                                 <img src={step.photo} alt="photo" className="my-3 w-12"/>
                                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
                                 <p className="text-gray-500">{step.description}</p>
                             </div>
+                           
                         ))}
                     </div>
+                    </Fade>
                 </div>
             </section>
         );
