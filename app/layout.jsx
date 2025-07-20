@@ -5,7 +5,7 @@ import '../styles/globals.css'
 export const metadata = {
   title: 'Debate Arena',
   icons: {
-    icon: '/assets/icons8-vote-100.png',
+    icon: '/assets/icons8-debate-100.png',
   },
 };
 
