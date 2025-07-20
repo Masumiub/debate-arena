@@ -11,17 +11,17 @@ const HeroSection = () => {
   //console.log("Session Data:", session);
 
   return (
-    <header className="min-h-[40vh] flex flex-col items-center justify-around md:flex-row px-4 bg-base-200 rounded-2xl">
+    <header className="min-h-[40vh] flex flex-col items-center justify-around md:flex-row px-4 bg-linear-to-r from-cyan-500 to-blue-500 rounded-2xl text-white">
 
 
       <div className="w-full md:w-1/2 px-6">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           {session && (
-            <p className="text-2xl text-gray-500 mt-4">Welcome, {session.user.name}!</p>
+            <p className="text-2xl mt-4">Welcome, {session.user.name}!</p>
           )}
           🗣️ Community Debate Arena
         </h1>
-        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6">
+        <p className="text-md md:text-xl mb-6">
           Battle of Opinions — Create or join debates, argue your stance, vote for the most compelling responses, and climb the scoreboard!
         </p>
 

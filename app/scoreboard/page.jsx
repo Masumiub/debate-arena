@@ -19,7 +19,9 @@ export default function ScoreBoardPage() {
 
   return (
     <div className="p-8 w-full md:w-8/12 mx-auto">
-      <h1 className="text-4xl font-bold text-center mb-6">🏆 Leaderboard</h1>
+
+
+      <h1 className="text-4xl font-bold text-center mb-6 mt-12">🏆 Leaderboard</h1>
 
       <div className="flex justify-center gap-4 mb-6">
         {['weekly', 'monthly', 'all'].map(r => (
@@ -33,7 +35,7 @@ export default function ScoreBoardPage() {
         ))}
       </div>
 
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto mt-15">
         <table className="table w-full">
           <thead>
             <tr>

@@ -45,7 +45,7 @@
             <section className="py-16 px-4 bg-base-100 text-base-content">
                 <div className="mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4"> How It Works</h2>
-                    <p className="text-gray-600 dark:text-gray-300 mb-12">
+                    <p className=" mb-12">
                         Engage in thought-provoking debates and let your voice be heard. Here's a quick guide to get started:
                     </p>
 
@@ -53,7 +53,7 @@
                         {steps.map((step, index) => (
                             <div
                                 key={index}
-                                className="card bg-base-200 shadow-md px-10 py-16 rounded-lg text-left hover:shadow-lg transition-all duration-300"
+                                className="card bg-linear-to-t from-base-100 to-base-200 shadow-md px-10 py-16 rounded-lg text-left hover:shadow-lg transition-all duration-300"
                             >
                                 <img src={step.photo} alt="photo" className="my-3 w-12"/>
                                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>

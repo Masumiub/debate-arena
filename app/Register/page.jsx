@@ -56,8 +56,8 @@ export default function Register() {
 
       <div className="flex flex-col md:flex-row items-center my-20">
 
-        <div className="w-full md:w-1/2">
-          <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-sm border p-4">
+        <div className="w-full md:w-1/2 mx-auto p-3">
+          <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4">
             <form onSubmit={handleSubmit(onSubmit)}>
               <legend className="text-center text-4xl font-bold">Register</legend>
 
