@@ -279,7 +279,7 @@ export default function DebatePage({ params }) {
                     )}
                 </div>)}
 
-            {side && (
+            {side && !isDebateOver && (
                 <div className="space-y-2 mt-4">
                     <textarea
                         className="textarea textarea-bordered w-full"
