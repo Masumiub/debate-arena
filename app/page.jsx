@@ -16,24 +16,24 @@ export default function HomePage() {
 
   return (
     <main className='w-full md:w-10/12 mx-auto'>
-      <Fade>
+      <Fade delay={500}>
         <HeroSection />
       </Fade>
-      <Fade>
+      <Fade delay={500}>
         <HowItWorks></HowItWorks>
       </Fade>
 
-      <Fade>
+      <Fade delay={500}>
         <AllDebates></AllDebates>
       </Fade>
 
-      <Fade>
+      <Fade delay={500}>
         <Testimonials></Testimonials>
       </Fade>
-      <Fade>
+      <Fade delay={500}>
         <Counts></Counts>
       </Fade>
-      <Fade>
+      <Fade delay={500}>
         <FAQs></FAQs>
       </Fade>
 
