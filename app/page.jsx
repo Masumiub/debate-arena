@@ -7,6 +7,7 @@ import Footer from '../components/Footer'
 import FAQs from '../components/FAQs'
 import { Fade } from "react-awesome-reveal";
 import Testimonials from '../components/Testimonials'
+import Counts from '../components/Counts'
 
 
 
@@ -28,6 +29,9 @@ export default function HomePage() {
 
       <Fade>
         <Testimonials></Testimonials>
+      </Fade>
+      <Fade>
+        <Counts></Counts>
       </Fade>
       <Fade>
         <FAQs></FAQs>
