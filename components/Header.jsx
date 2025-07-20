@@ -11,10 +11,10 @@ const HeroSection = () => {
   //console.log("Session Data:", session);
 
   return (
-    <header className="min-h-[40vh] flex flex-col items-center justify-around md:flex-row px-4 py-25 bg-linear-to-r from-cyan-500 to-blue-500 rounded-2xl text-white">
+    <header className="min-h-[40vh] flex flex-col items-center justify-around lg:flex-row px-4 py-25 bg-linear-to-r from-cyan-500 to-blue-500 rounded-2xl text-white">
 
 
-      <div className="w-full md:w-1/2 px-6">
+      <div className="w-full lg:w-1/2 px-6">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           {session && (
             <p className="text-2xl mt-4">Welcome, {session.user.name}!</p>
@@ -29,17 +29,17 @@ const HeroSection = () => {
         {!session && (
           <button
             onClick={() => signIn('google')}
-            className="btn btn-primary text-white px-6 py-3 rounded-full"
+            className="btn btn-primary text-white px-6 py-3 rounded-full mb-2"
           >
             Login with Google
           </button>
         )}
-        <Link href='/all-debates' className='btn btn-outline py-3  rounded-full ml-2'>Browse Debate</Link>
+        <Link href='/all-debates' className='btn btn-outline py-3 mb-2 rounded-full ml-2'>Browse Debate</Link>
 
       </div>
 
-      <div className='w-full md:w-1/2 mx-auto'>
-        <Lottie className="w-[270px] md:w-[400px] lg:w-[400px] mx-auto" animationData={Img} loop={true} ></Lottie>
+      <div className='w-full lg:w-1/2 mx-auto'>
+        <Lottie className="w-[270px] md:w-[300px] lg:w-[400px] mx-auto" animationData={Img} loop={true} ></Lottie>
       </div>
 
     </header>

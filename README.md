@@ -47,24 +47,24 @@ A full-stack web application where users can join or create public debates, choo
 
 ## 🚀 How to Run Locally
 1. Clone the repository
-git clone https://github.com/Masumiub/debate-arena.git
-cd debate-arena
+- git clone https://github.com/Masumiub/debate-arena.git
+- cd debate-arena
 
 2. Install dependencies
-npm install
+- npm install
 
 3. Configure environment variables
-Create a .env.local file in the root and add the following:
+- Create a .env.local file in the root and add the following:
 
-NEXTAUTH_SECRET=your_random_secret
-NEXTAUTH_URL=http://localhost:3000
+- NEXTAUTH_SECRET=your_random_secret
+- NEXTAUTH_URL=http://localhost:3000
 
 # Google Auth
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
+- GOOGLE_CLIENT_ID=your_google_client_id
+- GOOGLE_CLIENT_SECRET=your_google_client_secret
 
 # MongoDB
-MONGODB_URI=your_mongodb_connection_string
+- MONGODB_URI=your_mongodb_connection_string
 
 4. Run the development server
-npm run dev
+- npm run dev
