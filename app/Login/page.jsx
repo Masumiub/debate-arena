@@ -32,11 +32,11 @@ export default function Login() {
   return (
 
 
-    <div className="w-full md:w-6/12 mx-auto">
+    <div className="w-full md:w-6/12 mx-auto bg-linear-to-r from-cyan-500 to-blue-500 rounded-2xl mt-5">
 
-      <div className="flex flex-col md:flex-row items-center my-20">
+      <div className="flex flex-col xl:flex-row items-center mb-20 py-25 px-10">
 
-        <div className="w-full md:w-1/2 mx-auto p-3">
+        <div className="w-full xl:w-1/2 mx-auto p-3">
           <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
             <form onSubmit={handleSubmit(onSubmit)}>
               <legend className="text-center text-4xl font-bold">Login</legend>
@@ -60,13 +60,10 @@ export default function Login() {
 
           </fieldset>
 
-
-
-
         </div>
 
-        <div className='w-full md:w-1/2 mx-auto'>
-          <Lottie className="w-[270px] md:w-[400px] lg:w-[400px] mx-auto" animationData={Img} loop={true} ></Lottie>
+        <div className='w-full xl:w-1/2 mx-auto'>
+          <Lottie className="w-[270px] md:w-[300px] lg:w-[400px] mx-auto" animationData={Img} loop={true} ></Lottie>
         </div>
 
       </div>
