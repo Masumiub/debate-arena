@@ -1,0 +1,33 @@
+{
+  "name": "debate-arena",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.3.1",
+    "@tailwindcss/postcss": "^4.1.11",
+    "axios": "^1.10.0",
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^17.2.0",
+    "moment": "^2.30.1",
+    "mongodb": "^6.17.0",
+    "next": "^15.4.1",
+    "next-auth": "^4.24.11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.60.0",
+    "react-icons": "^5.5.0",
+    "react-ions": "^0.0.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "daisyui": "^5.0.46",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "/api/debates/[id]/arguments/route": "app/api/debates/[id]/arguments/route.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/api/debates/[id]/route": "app/api/debates/[id]/route.js",
+  "/api/arguments/[argId]/vote/route": "app/api/arguments/[argId]/vote/route.js",
+  "/api/debates/route": "app/api/debates/route.js",
+  "/page": "app/page.js",
+  "/Login/page": "app/Login/page.js",
+  "/debate/[id]/page": "app/debate/[id]/page.js",
+  "/all-debates/page": "app/all-debates/page.js"
+}
