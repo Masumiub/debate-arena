@@ -44,14 +44,14 @@ const Footer = () => {
                     <h6 className="footer-title">Company</h6>
                         <Link href='/'>Home</Link>
                         <Link href='/all-debates'>Debates</Link>
-                        <Link href='/aboutUs'>About us</Link>
+                        <Link href='/'>About us</Link>
                         <Link href='/scoreboard'>Scores</Link>
                 </nav>
                 <nav>
                     <h6 className="footer-title">General</h6>
-                    <Link href='/aboutUs'>Our Team</Link> 
+                    <Link href='/'>Our Team</Link> 
                     <a className="link link-hover">Terms & conditions</a>
-                    <Link href='/aboutUs'>Contact Us</Link> 
+                    <Link href='/'>Contact Us</Link> 
                     
                 </nav>
                 <form>
