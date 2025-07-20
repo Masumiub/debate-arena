@@ -143,6 +143,11 @@ export default function DebatePage({ params }) {
             .then((res) => {
                 if (res.data.success) {
                     setArgumentsList(prev => prev.filter(arg => arg._id !== argId));
+                    Swal.fire({
+                        icon: "success",
+                        title: "Deleted",
+                        text: "Your Argument was deleted",
+                    });
                 } else {
                     //alert('Failed to delete argument.');
                     Swal.fire({
