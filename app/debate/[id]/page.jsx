@@ -28,8 +28,8 @@ export default function DebatePage({ params }) {
     const [hasPosted, setHasPosted] = useState(false);
 
 
-    let endTime = null;
-    let isDebateOver = false;
+const [isDebateOver, setIsDebateOver] = useState(false);
+const [endTime, setEndTime] = useState(null);
 
 
     useEffect(() => {
@@ -64,6 +64,19 @@ export default function DebatePage({ params }) {
             fetchUserParticipation();
         }
     }, [id, session]);
+
+    useEffect(() => {
+    if (debate) {
+        const parseDuration = (durationStr) => {
+            const hours = parseInt(durationStr.replace('h', ''));
+            return hours * 60 * 60 * 1000;
+        };
+
+        const calculatedEnd = new Date(new Date(debate.createdAt).getTime() + parseDuration(debate.duration));
+        setEndTime(calculatedEnd);
+        setIsDebateOver(new Date() > calculatedEnd);
+    }
+}, [debate]);
 
 
     useEffect(() => {
