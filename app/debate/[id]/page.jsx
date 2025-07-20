@@ -131,9 +131,15 @@ export default function DebatePage({ params }) {
             setArgumentText('');
             setHasPosted(true);
 
-
             const res = await axios.get(`/api/debates/${id}/arguments`);
             setArgumentsList(res.data);
+
+
+            Swal.fire({
+                icon: "success",
+                title: "Great!",
+                text: "Your Argument was posted!",
+            });
         });
     };
 
