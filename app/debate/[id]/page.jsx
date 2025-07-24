@@ -329,7 +329,7 @@ const [endTime, setEndTime] = useState(null);
                                     <p>Votes: {arg.votes}</p>
                                     {arg.author.email === session.user.email &&
                                         moment().diff(moment(arg.createdAt), 'minutes') <= 5 && (
-                                            <button className="btn btn-sm btn-outline btn-error text-white rounded-full" onClick={() => handleDelete(arg._id, arg.createdAt)}>
+                                            <button className="btn btn-sm btn-outline btn-error rounded-full" onClick={() => handleDelete(arg._id, arg.createdAt)}>
                                                 <MdDelete />  Delete
                                             </button>
                                         )}
