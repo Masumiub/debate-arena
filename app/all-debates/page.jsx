@@ -16,7 +16,9 @@ export default function AllDebatesPage() {
   useEffect(() => {
     const fetchDebates = async () => {
       try {
-        const res = await fetch('../api/debates')
+        const res = await fetch('../api/debates', {
+          cache: 'force-cache',
+        })
         const data = await res.json()
         setDebates(data)
       } catch (error) {
