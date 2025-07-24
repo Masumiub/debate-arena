@@ -1,5 +1,5 @@
+'use client';
 import Link from 'next/link';
-import React from 'react';
 import Lottie from "lottie-react";
 import ErrorImg from '../public/assets/Website maintenance, website problems, 404.json'
 
