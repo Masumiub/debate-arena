@@ -4,7 +4,7 @@ import Lottie from "lottie-react";
 import ErrorImg from '../public/assets/Website maintenance, website problems, 404.json'
 
 
-const notFound = () => {
+const notFoundPage404 = () => {
     return (
 <div className='mx-auto flex flex-col justify-center text-center my-30'>
             <div className='mx-auto'>
@@ -20,4 +20,4 @@ const notFound = () => {
     );
 };
 
-export default notFound;
+export default notFoundPage404;
