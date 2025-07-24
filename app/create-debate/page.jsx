@@ -27,13 +27,13 @@ export default function CreateDebatePage() {
   const { data: session } = useSession()
   const [uploading, setUploading] = useState(false)
 
-    const router = useRouter()
+  const router = useRouter()
 
-useEffect(() => {
-  if (session === null) {
-    router.push('/')
-  }
-}, [session, router])
+  useEffect(() => {
+    if (session === null) {
+      router.push('/')
+    }
+  }, [session, router])
 
   const onSubmit = async (data) => {
     if (!session) return alert('Please log in to create a debate.')
@@ -72,10 +72,25 @@ useEffect(() => {
     })
 
     if (res.ok) {
-      alert('Debate created successfully!')
-      reset()
+      //alert('Debate created successfully!')
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Your debate has been created",
+        showConfirmButton: false,
+        timer: 1500
+      });
+      reset();
+      router.push('/all-debates')
     } else {
-      alert('Failed to create debate')
+      //alert('Failed to create debate')
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "Failed to create debate",
+        showConfirmButton: false,
+        timer: 1500
+      });
     }
 
     setUploading(false)
@@ -97,7 +112,7 @@ useEffect(() => {
       <input {...register('category')} placeholder="Category (e.g., Ethics)" className="input input-bordered w-full" />
       {errors.category && <p className="text-error">{errors.category.message}</p>}
 
-<label className="label">Tags</label>
+      <label className="label">Tags</label>
       <input {...register('tags')} placeholder="Tags (comma-separated)" className="input input-bordered w-full" />
       {errors.tags && <p className="text-error">{errors.tags.message}</p>}
 
