@@ -7,6 +7,7 @@ import { useState } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
+import Swal from 'sweetalert2'
 
 const schema = z.object({
   title: z.string().min(5, 'Title must be at least 5 characters'),
